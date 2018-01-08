@@ -5,7 +5,7 @@ filetype on					" 文件类型检测
 winpos 480 200          	" 设定窗口位置
 set shortmess=atI   		" 去掉欢迎界面
 "set lines=40 columns=155   " 设定窗口大小
-set tabstop=4               " 设置tab键的宽度
+set tabstop=2               " 设置tab键的宽度
 set autoindent              " 自动对齐
 set nu!              		" 显示行号
 "set number					" 显示行号
@@ -16,7 +16,7 @@ set ruler                   " 右下角显示光标位置的状态行
 syntax enable               " 打开语法高亮
 "syntax on					" 语法高亮	
 colorscheme monokai     	" 设置背景主题 
-set guifont=Consolas:h12    " 字体与字号
+set guifont=Consolas:h14    " 字体与字号
 "set confirm				" 没有保存或文件只读时弹出确认
 "set showcmd				" 输入的命令显示出来，看的更清楚？？没反应
 "set foldenable				" 允许折叠??没反应
@@ -34,12 +34,19 @@ set cursorline				" 突出显示当前行
 " 编码相关
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set encoding=utf-8 		" 会让菜单乱码？？？？？
-set fileencodings=utf-8,gbk,gb18030,gk2312
+"set fileencodings=utf-8,gbk,gb18030,gk2312
+set encoding=utf-8
+set fileencodings=utf-8,chinese,latin-1
+if has("win32")
+	set fileencoding=chinese
+else
+    set fileencoding=utf-8
+endif
 "解决菜单乱码
-source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
 "解决consle输出乱码
-"language messages zh_CN.utf-8
+language messages zh_CN.utf-8
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 搜索相关
