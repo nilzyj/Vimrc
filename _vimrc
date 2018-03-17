@@ -16,7 +16,7 @@ set ruler                   " 右下角显示光标位置的状态行
 syntax enable               " 打开语法高亮
 "syntax on					" 语法高亮	
 colorscheme monokai     	" 设置背景主题 
-set guifont=Consolas:h20    " 字体与字号
+set guifont=Consolas:h16    " 字体与字号
 "set confirm				" 没有保存或文件只读时弹出确认
 "set showcmd				" 输入的命令显示出来，看的更清楚？？没反应
 "set foldenable				" 允许折叠??没反应
@@ -132,7 +132,8 @@ map <Leader><leader>l <Plug>(easymotion-lineforward)
 " 重复上一次操作, 类似repeat插件, 很强大
 map <Leader><leader>. <Plug>(easymotion-repeat)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+" 文件结构
+Plugin 'scrooloose/nerdtree'
 """""""""""""""" 来自http://vim-scripts.org/vim/scripts.html的插件 """"""""""""""""
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
